@@ -1,0 +1,278 @@
+/* Custom styles for SMS Bomber */
+
+/* Speed button styling */
+.speed-button.active {
+    background-color: #2563eb !important;
+    color: white !important;
+}
+
+.speed-button:hover:not(.active) {
+    background-color: #f3f4f6 !important;
+}
+
+/* Animation for results */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Fade in animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Progress bar animation */
+#progressFill {
+    transition: width 0.3s ease;
+}
+
+/* Smooth transitions for interactive elements */
+button, a {
+    transition: all 0.2s ease;
+}
+
+/* Form input focus effects */
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Card hover effects */
+.hover\:shadow-lg:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: opacity 0.3s ease;
+}
+
+/* FAQ accordion */
+#faq button:hover {
+    background-color: #f9fafb;
+}
+
+/* Enhanced responsive adjustments */
+@media (max-width: 768px) {
+    .animate-fade-in-down, .animate-fade-in-up {
+        animation: none;
+    }
+    
+    #sms-bomber .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    #sms-bomber .flex .flex-1 {
+        width: 100%;
+    }
+    
+    /* Adjust grid layouts for mobile */
+    .grid-cols-1.md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-cols-1.md\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust section padding */
+    .py-16 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .py-20 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    /* Adjust font sizes */
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+    
+    .text-4xl {
+        font-size: 2.25rem;
+    }
+    
+    /* Adjust button layouts */
+    .flex-col.sm\:flex-row {
+        flex-direction: column;
+    }
+    
+    .gap-4 {
+        gap: 1rem;
+    }
+    
+    /* Adjust form elements */
+    #sms-bomber .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust footer layout */
+    .md\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust testimonial cards */
+    .grid-cols-1.md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .text-xl {
+        font-size: 1.125rem;
+    }
+    
+    .py-3 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Adjust mobile menu */
+    #mobile-menu .space-y-6 {
+        gap: 1rem;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Large devices */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optimize for performance */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input, textarea {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Prevent overscroll */
+html, body {
+    overscroll-behavior: none;
+}
+
+/* Optimize for touch devices */
+button, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
+}
+
+/* Improve font rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+/* Optimize for high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: antialiased;
+    }
+}
